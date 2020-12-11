@@ -36,6 +36,8 @@ kucanje();
 
 var nizSrc = ["images/cuba.jpg", "images/zante.jpg", "images/alpi.jpg", "images/rio.jpg", "images/ny.jpg",
              "images/monte-carlo.jpg", "images/paris.jpg", "images/bankok.jpg", "images/jerusalim.jpg"];
+var nizHref = ["images/cuba2.jpg", "images/zante2.jpg", "images/alpi2.jpg", "images/rio2.jpg", "images/ny2.jpg",
+"images/monte-carlo2.jpg", "images/paris2.jpg", "images/bankok2.jpg", "images/jerusalim2.jpg"];              
 
 var nizAlt = ["Cuba", "Greece", "France", "Brasil", "USA", "Monaco", "France", "Thailand", "Israel"];
 
@@ -57,7 +59,7 @@ var ispisGalerija = "";
 for(let j = 0; j < nizSrc.length; j++)
 {
     ispisGalerija += `
-    <a class="each-portfolio" data-fancybox="gallery" href="${nizSrc[j]}">
+    <a class="each-portfolio" data-fancybox="gallery" href="${nizHref[j]}">
         <div class="content hover-cont-wrap">
             <div class="content-overlay"></div>
                 <img class="content-image" src="${nizSrc[j]}" alt="${nizAlt[j]}">
