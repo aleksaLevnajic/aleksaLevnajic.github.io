@@ -584,3 +584,10 @@ footer.footer p.small a:hover, footer.footer p.small a.focus {
 #tekstAutor p a{
     color: #02ccba;
 }
+.excellent{
+  display:none;
+  color:#39bd91;
+}
+form ::placeholder{
+  color:red;
+}

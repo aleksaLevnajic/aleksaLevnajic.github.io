@@ -3,10 +3,22 @@ console.log("proba");
 
 //var about =
 
- document.getElementById("aboutTekst").innerHTML = `TravelEasy is international travel agency that allows you to visit one of the most beautiful places in the world with easy way to book it.
- We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself. What we offer is a great expirience 
- and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of expirience in trip planning as also in
- organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy and gave them something that they will always remember.`;
+//  document.getElementById("aboutTekst").innerHTML = `TravelEasy is international travel agency that allows you to visit one of the most beautiful places in the world with easy way to book it.
+//  We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself. What we offer is a great expirience 
+//  and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of expirience in trip planning as also in
+//  organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy and gave them something that they will always remember.`;
+
+//  document.getElementById("aboutTekst2").innerHTML = `TravelEasy is international travel agency that allows you to visit one of the most beautiful places in the world with easy way to book it.
+//  We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself. What we offer is a great expirience 
+//  and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of expirience in trip planning as also in
+//  organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy and gave them something that they will always remember.`;
+
+//  document.getElementById("aboutTekst3").innerHTML = `TravelEasy is international travel agency that allows you to visit one of the most beautiful places in the world with easy way to book it.
+//  We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself. What we offer is a great expirience 
+//  and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of expirience in trip planning as also in
+//  organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy and gave them something that they will always remember.`;
+
+
 
  var j = 0;
  var text;
@@ -63,10 +75,19 @@ document.querySelector(".portfolio-wrapper ").innerHTML = ispisGalerija;
 
 
 //var nizTh = ["Airport", "Location", "Departure", "Price"];
-var nizAerodrum = ["Airport", "Beijing Capital International Airport", "Los Angeles International Airport", "Dubai International Airport", " Tokyo Haneda Airport", "London Heathrow Airport", "Shanghai Pudong International Airport", "Charles de Gaulle Airport", "Amsterdam Airport Schiphol", "Seoul Incheon International Airport", "Frankfurt Airport", "Singapore Changi Airport"];
-var nizLet = ["Location"," Beijing, China", "Los Angeles, USA", "Dubai, UEA", "Tokyo, Japan", "London, UK", "Shanghai, China", "Paris, France", "Amsterdam, Netherlands", "Incheon, South Korea", "Frankfurt, Germany", "	Changi, East Region, Singapore"];
-var nizPolazak = ["Departure", "18:00", "11:00", "17:30", "12:15", "9:45", "23:00", "14:30", "20:00", "9:00", "11:00", "14:50"];
-var nizCena = ["Price", "$179.59", "$126.99", "$118.80", "$219.89", "$169.99", "$185.89", "$89.50", "$78.20", "$230.59", "$119.89$", "$249.89$"];
+var nizAerodrum = ["Airport", "Beijing Capital International Airport", "Los Angeles International Airport",
+ "Dubai International Airport", " Tokyo Haneda Airport", "London Heathrow Airport", "Shanghai Pudong International Airport",
+  "Charles de Gaulle Airport", "Amsterdam Airport Schiphol", "Seoul Incheon International Airport", 
+    "Frankfurt Airport", "Singapore Changi Airport", "Madrid Barajas Airport", "San Francisco International Airport", 
+    "Soekarno–Hatta International Airport", "Shenzhen Bao'an International Airport", "Barcelona–El Prat Airport"];
+var nizLet = ["Location"," Beijing, China", "Los Angeles, USA", "Dubai, UEA", "Tokyo, Japan", "London, UK",
+ "Shanghai, China", "Paris, France", "Amsterdam, Netherlands", "Incheon, South Korea", "Frankfurt, Germany",
+  "	Changi, East Region, Singapore", " Madrid, Spain", "San Francisco, USA", "Tangerang Banten,	Indonesia",
+   "Shenzhen Guangdong, China", "Barcelona	Spain"];
+var nizPolazak = ["Departure", "18:00", "11:00", "17:30", "12:15", "9:45", "23:00", "14:30", "20:00",
+                 "9:00", "11:00", "14:50", "11:45", "10:00", "12:30", "19:45", "23:30"];
+var nizCena = ["Price", "$179.59", "$126.99", "$118.80", "$219.89", "$169.99", "$185.89", "$89.50",
+             "$78.20", "$230.59", "$119.89$", "$249.89$", "$118.80", "$135.79", "$179.59", "$109.89$", "$130.59"];
 
 var tagTable = document.createElement("table");
 tagTable.setAttribute("border", "1");
@@ -135,6 +156,10 @@ dugme.click(function(){
     let prezimeProvera = /^[A-Z][a-z]{2,20}$/;
     let emailProvera = /^\w([\.-_]?\w+\d*)*@\w+\.\w{2,6}$/;
     //let proveraTel = /^[0-9]{8,11}$/;
+
+    let imeTacnost;
+    let prezimeTacnost;
+    let emailTacnost;
     //IME
     if(ime.val() == '')
     {
@@ -143,7 +168,8 @@ dugme.click(function(){
     }
     else if(imeProvera.test(ime.val()))
     {
-        obradaForme.push(ime.val());        
+        obradaForme.push(ime.val());    
+        imeTacnost = true;
     }
     else
     {
@@ -158,9 +184,10 @@ dugme.click(function(){
         prezime.val('');
         prezime.attr('placeholder', 'Last name can\'t be empty. ');
     }
-    else if(prezimeProvera.test(ime.val()))
+    else if(prezimeProvera.test(prezime.val()))
     {   
-        obradaForme.push(prezime.val());        
+        obradaForme.push(prezime.val());  
+        prezimeTacnost = true;     
     }
     else
     {
@@ -175,7 +202,8 @@ dugme.click(function(){
     }
     else if(emailProvera.test(mail.val()))
     {   
-        obradaForme.push(mail.val());        
+        obradaForme.push(mail.val());   
+        emailTacnost = true;      
     }
     else
     {
@@ -192,5 +220,16 @@ dugme.click(function(){
     // {
     //     obradaForme.push(tel.val());  
     // }
-
+    if(imeTacnost == true && prezimeTacnost == true && emailTacnost == true)
+    {
+        $(document).ready(function(){
+            $('.excellent').css('display','block');
+        });
+    }
+    else
+    {
+        $(document).ready(function(){
+            $('.excellent').css('display','none');
+        });
+    }
 });
