@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<rss version="2.0">
+
+
+<channel>
+
+<title>New destination</title>
+
+<link>https://aleksalevnajic.github.io/</link>
+
+<description>We added a new destination</description>
+
+
+<item>
+
+<title>More flites</title>
+
+<link>https://aleksalevnajic.github.io/</link>
+
+<description>We now have more flites in our inventory</description>
+
+</item>
+
+
+<item>
+
+<title>Feedbacks of our tourists</title>
+
+<link>https://aleksalevnajic.github.io/</link>
+
+<description>They are all very happy with our service</description>
+
+</item>
+
+
+</channel>
+
+</rss>
