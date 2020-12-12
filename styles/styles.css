@@ -559,7 +559,9 @@ footer.footer p.small a:hover, footer.footer p.small a.focus {
 #Contact .address-block span {
 	text-transform: none;
 }
-
+#txt {
+  font-size: 24px;
+}
 #tabela-01{
   margin: 60px 0px;
   text-align: center;

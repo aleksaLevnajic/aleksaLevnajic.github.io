@@ -1,23 +1,49 @@
 console.log("proba");
 
 
-//var about =
 
-//  document.getElementById("aboutTekst").innerHTML = `TravelEasy is international travel agency that allows you to visit one of the most beautiful places in the world with easy way to book it.
-//  We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself. What we offer is a great expirience 
-//  and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of expirience in trip planning as also in
-//  organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy and gave them something that they will always remember.`;
+var k = 0;
+var nizTxt = [`TravelEasy is international travel agency that allows you to visit one of the most beautiful
+ places in the world with easy way to book it.
+  We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself.
+   What we offer is a great expirience 
+ and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of
+  expirience in trip planning as also in
+  organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy 
+  and gave them something that they will always remember.`,
+   
+  `Besides accommodations, the GIS platform also maps other tourist attractions including natural and cultural heritages,
+   restaurants, clubs, museums, which previously
+    haven’t been exposed to the social media. One of the known facts is that with the technological advancements,
+     tourists leave a large percent of their planning while
+     being on the trip. The GIS platform also enables tourists to plan their trips, offering them best and most accurate
+      transportation methods. Meanwhile, 
+     the GIS platform also presents them other locations and attractions that are worth seeing on the way of
+      reaching their location.`, 
+   
+     `TravelEasy Ltd. is a company established and existing under the laws of Serbia and registered tour operator
+      with the licence number PKK-01-05888.TravelEasy Platform
+     is a registered trademark, issued by European Union Intellectual Property Office under the number 016862989.
+    TravelEasy Platform is a provider of travel services worldwide. Our goal is to make everyones trips more easier and more fun.
+    Our team has 10+ years of expirience in hotel managmente, guides that speak 4 or more diffrent laguages 
+    and all arounf world connections.`]
 
-//  document.getElementById("aboutTekst2").innerHTML = `TravelEasy is international travel agency that allows you to visit one of the most beautiful places in the world with easy way to book it.
-//  We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself. What we offer is a great expirience 
-//  and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of expirience in trip planning as also in
-//  organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy and gave them something that they will always remember.`;
+function txtPromena(){
+    var dohvatanjeTxt = document.getElementById("txt");
+    dohvatanjeTxt.innerHTML = nizTxt[k];
 
-//  document.getElementById("aboutTekst3").innerHTML = `TravelEasy is international travel agency that allows you to visit one of the most beautiful places in the world with easy way to book it.
-//  We have more than 700 diffrent place for you to visit with your family, your partner or even all by yourself. What we offer is a great expirience 
-//  and a lot of things to learn about foreign cultures and traditions.Our guides and travel managers have a lot of expirience in trip planning as also in
-//  organasations of all kind of diffrent patries and custom carnevals that made over a 30000 of our clients happy and gave them something that they will always remember.`;
+    if(k < nizTxt.length - 1)
+    {
+        k++;
+    }
+    else
+    {
+        k = 0;
+    }
 
+    setTimeout(txtPromena, 5000);
+}  
+txtPromena();
 
 
  var j = 0;
@@ -36,6 +62,7 @@ kucanje();
 
 var nizSrc = ["images/cuba.jpg", "images/zante.jpg", "images/alpi.jpg", "images/rio.jpg", "images/ny.jpg",
              "images/monte-carlo.jpg", "images/paris.jpg", "images/bankok.jpg", "images/jerusalim.jpg"];
+
 var nizHref = ["images/cuba2.jpg", "images/zante2.jpg", "images/alpi2.jpg", "images/rio2.jpg", "images/ny2.jpg",
 "images/monte-carlo2.jpg", "images/paris2.jpg", "images/bankok2.jpg", "images/jerusalim2.jpg"];              
 
@@ -76,7 +103,7 @@ document.querySelector(".portfolio-wrapper ").innerHTML = ispisGalerija;
 
 
 
-//var nizTh = ["Airport", "Location", "Departure", "Price"];
+
 var nizAerodrum = ["Airport", "Beijing Capital International Airport", "Los Angeles International Airport",
  "Dubai International Airport", " Tokyo Haneda Airport", "London Heathrow Airport", "Shanghai Pudong International Airport",
   "Charles de Gaulle Airport", "Amsterdam Airport Schiphol", "Seoul Incheon International Airport", 
@@ -139,21 +166,17 @@ $(document).ready(function(){
         $(this).toggleClass('zebraHover');
     });
 });
-//$(documnet).ready(function(){
- //   $('#tabela-01 tr').click(function(){
-       
-//    });
-//});
+
+
 
 let obradaForme = [];
 let dugme = $(':button');
+
 dugme.click(function(){
     let ime = $('#ime');
     let prezime = $('#prezime');
     let mail = $('#email');
-    //let tel = $('#tel');
-    //let poruka = $('#poruka');
-
+    
     let imeProvera = /^[A-Z][a-z]{2,20}$/;
     let prezimeProvera = /^[A-Z][a-z]{2,20}$/;
     let emailProvera = /^\w([\.-_]?\w+\d*)*@\w+\.\w{2,6}$/;
@@ -162,6 +185,7 @@ dugme.click(function(){
     let imeTacnost;
     let prezimeTacnost;
     let emailTacnost;
+
     //IME
     if(ime.val() == '')
     {
@@ -212,16 +236,7 @@ dugme.click(function(){
         mail.val('');
         mail.attr('placeholder', 'You didn\'t fill yor last name correctly (eg. something@gmail.com). ');
     }
-    //TELEFON
-    // if(tel.val() == "")
-    // {
-    //     tel.val('');
-    //     tel.attr('placeholder', 'eg. 06X XXX XXXX');
-    // }                
-    // else
-    // {
-    //     obradaForme.push(tel.val());  
-    // }
+    //ZA PRIKAZIVANJE SPAN TAGA
     if(imeTacnost == true && prezimeTacnost == true && emailTacnost == true)
     {
         $(document).ready(function(){
