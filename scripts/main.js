@@ -177,8 +177,8 @@ dugme.click(function(){
     let prezime = $('#prezime');
     let mail = $('#email');
     
-    let imeProvera = /^[A-Z][a-z]{2,20}$/;
-    let prezimeProvera = /^[A-Z][a-z]{2,20}$/;
+    let imeProvera = /^[A-Z][a-z]{2,19}(\s[A-Z][a-z]{2,19})+$/;
+    let prezimeProvera = /^[A-Z][a-z]{2,19}(\s[A-Z][a-z]{2,19})+$/;
     let emailProvera = /^\w([\.-_]?\w+\d*)*@\w+\.\w{2,6}$/;
     //let proveraTel = /^[0-9]{8,11}$/;
 
